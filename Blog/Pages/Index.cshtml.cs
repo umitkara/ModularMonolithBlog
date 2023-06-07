@@ -16,19 +16,5 @@ namespace Blog.Pages
         {
             
         }
-
-        public async Task Test()
-        {
-            var newUser = new Blog.User.Entities.User
-            {
-                Email = "test@test.com",
-                FullName = "Test User",
-                BirthDate = DateTime.Now,
-                PhoneNumber = "1234567890",
-                UserName = "testuser"
-            };
-            var usr = await _userService.CreateUserAsync(newUser);
-            var asd = await _userService.GetUserByIdAsync(usr?.Id);
-        }
     }
 }
