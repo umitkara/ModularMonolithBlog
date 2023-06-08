@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Blog.Category\Blog.Category.csproj" />
     <ProjectReference Include="..\Blog.Comment\Blog.Comment.csproj" />
     <ProjectReference Include="..\Blog.Post\Blog.Post.csproj" />
     <ProjectReference Include="..\Blog.User\Blog.User.csproj" />

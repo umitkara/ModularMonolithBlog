@@ -13,7 +13,10 @@ public sealed class Post
     [Required]
     public DateTime PublishDate { get; set; }
     [Required]
-    public string PublishedBy { get; set; }
-    public List<string> Tags { get; set; }
+    public string PublishedById { get; set; }
+    public string PublishedByName { get; set; }
+    //public List<string> Tags { get; set; }
+    public int CategoryId { get; set; }
+    public string CategoryName { get; set; }
     // Comments
 }

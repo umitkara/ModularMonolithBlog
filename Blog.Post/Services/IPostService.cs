@@ -8,7 +8,7 @@ public interface IPostService
     Task DeletePostAsync(int id);
     Task<Entities.Post?> GetPostByFilter(Expression<Func<Entities.Post, bool>> filter);
     Task<Entities.Post?> GetPostByIdAsync(int id);
-    Task<List<Entities.Post>> GetPosts();
-    Task<List<Entities.Post>> GetPosts(Expression<Func<Entities.Post, bool>> filter);
+    Task<List<Entities.Post>> GetPostsAsync();
+    Task<List<Entities.Post>> GetPostsAsync(Expression<Func<Entities.Post, bool>> filter);
     Task<Entities.Post?> UpdatePostAsync(Entities.Post post);
 }
