@@ -14,9 +14,9 @@ public sealed class PostService : IPostService
 
     public async Task<Entities.Post?> CreatePostAsync(Entities.Post post) => await _postRepository.CreatePostAsync(post);
 
-    public async Task<List<Entities.Post>> GetPosts() => await _postRepository.GetPostsAsync();
+    public async Task<List<Entities.Post>> GetPostsAsync() => await _postRepository.GetPostsAsync();
 
-    public async Task<List<Entities.Post>> GetPosts(Expression<Func<Entities.Post, bool>> filter) => await _postRepository.GetPostsAsync(filter);
+    public async Task<List<Entities.Post>> GetPostsAsync(Expression<Func<Entities.Post, bool>> filter) => await _postRepository.GetPostsAsync(filter);
 
     public async Task<Entities.Post?> GetPostByIdAsync(int id) => await _postRepository.GetAsync(id);
 
