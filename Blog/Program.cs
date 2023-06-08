@@ -17,13 +17,18 @@ builder.Services.AddDbContext<Blog.Post.Data.PostDbContext>(options =>
 builder.Services.AddDbContext<Blog.Comment.Data.CommentDbContext>(options =>
                     options.UseInMemoryDatabase("CommentDb"));
 
+builder.Services.AddDbContext<Blog.Category.Data.CategoryDbContext>(options =>
+                    options.UseInMemoryDatabase("CategoryDb"));
+
 builder.Services.AddScoped<Blog.User.Repositories.IUserRepository, Blog.User.Repositories.UserRepository>();
 builder.Services.AddScoped<Blog.Post.Repositories.IPostRepository, Blog.Post.Repositories.PostRepository>();
 builder.Services.AddScoped<Blog.Comment.Repositories.ICommentRepository, Blog.Comment.Repositories.CommentRepository>();
+builder.Services.AddScoped<Blog.Category.Repositories.ICategoryRepository, Blog.Category.Repositories.CategoryRepository>();
 
 builder.Services.AddScoped<Blog.User.Services.IUserService, Blog.User.Services.UserService>();
 builder.Services.AddScoped<Blog.Post.Services.IPostService, Blog.Post.Services.PostService>();
 builder.Services.AddScoped<Blog.Comment.Services.ICommentService, Blog.Comment.Services.CommentService>();
+builder.Services.AddScoped<Blog.Category.Services.ICategoryService, Blog.Category.Services.CategoryService>();
 
 var app = builder.Build();
 
